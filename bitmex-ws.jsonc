@@ -1,0 +1,668 @@
+// subscribe example bitmex
+{
+  "type": "subscribe",
+  "product_ids": [
+    "BTC-USD"
+  ],
+  "channels": [
+    {
+      "name": "level2",
+      "product_ids": [
+        "BTC-USD"
+      ]
+    },
+    "heartbeat",
+    {
+      "name": "ticker",
+      "product_ids": [
+        "BTC-USD"
+      ]
+    }
+  ]
+}
+// response subscribe
+{
+  "type": "ticker",
+  "sequence": 100596541684,
+  "product_id": "BTC-USD",
+  "price": "87102.64",
+  "open_24h": "83374.25",
+  "volume_24h": "19805.81508492",
+  "low_24h": "81444",
+  "high_24h": "88977.27",
+  "volume_30d": "337818.36640870",
+  "best_bid": "87102.63",
+  "best_bid_size": "0.08709898",
+  "best_ask": "87102.64",
+  "best_ask_size": "0.16040720",
+  "side": "buy",
+  "time": "2025-03-05T04:12:15.483441Z",
+  "trade_id": 791849850,
+  "last_size": "0.00121915"
+}
+
+
+{
+  "type": "match",
+  "trade_id": 791849850,
+  "maker_order_id": "b42611fc-52d4-4f2b-9903-8bea307b6d7e",
+  "taker_order_id": "52b144c0-4a9d-4f9a-b086-8f437196e03c",
+  "side": "sell",
+  "size": "0.00121915",
+  "price": "87102.64",
+  "product_id": "BTC-USD",
+  "sequence": 100596541684,
+  "time": "2025-03-05T04:12:15.483441Z"
+}
+{
+  "type": "ticker",
+  "sequence": 100597302759,
+  "product_id": "BTC-USD",
+  "price": "87249.09",
+  "open_24h": "83374.25",
+  "volume_24h": "19846.01689663",
+  "low_24h": "81444",
+  "high_24h": "88977.27",
+  "volume_30d": "337858.56822041",
+  "best_bid": "87244.23",
+  "best_bid_size": "0.00100000",
+  "best_ask": "87249.11",
+  "best_ask_size": "0.03000000",
+  "side": "sell",
+  "time": "2025-03-05T04:22:15.360053Z",
+  "trade_id": 791853736,
+  "last_size": "0.26837283"
+}
+// order book L2 response bitmex
+{
+  "table": "orderBookL2",
+  "action": "delete",
+  "data": [
+    {
+      "symbol": "XBTUSD",
+      "id": 86613074589,
+      "side": "Sell",
+      "price": 86958.6,
+      "timestamp": "2025-03-05T05:07:22.672Z",
+      "transactTime": "2025-03-05T05:07:22.641Z"
+    },
+    {
+      "symbol": "XBTUSD",
+      "id": 86613074224,
+      "side": "Sell",
+      "price": 86972.6,
+      "timestamp": "2025-03-05T05:07:22.672Z",
+      "transactTime": "2025-03-05T05:07:22.639Z"
+    },
+    {
+      "symbol": "XBTUSD",
+      "id": 86613074641,
+      "side": "Buy",
+      "price": 86887.3,
+      "timestamp": "2025-03-05T05:07:22.672Z",
+      "transactTime": "2025-03-05T05:07:22.625Z"
+    },
+    {
+      "symbol": "XBTUSD",
+      "id": 86613074549,
+      "side": "Buy",
+      "price": 86917.6,
+      "timestamp": "2025-03-05T05:07:22.672Z",
+      "transactTime": "2025-03-05T05:07:22.642Z"
+    },
+    {
+      "symbol": "XBTUSD",
+      "id": 86613070378,
+      "side": "Buy",
+      "price": 86912.9,
+      "timestamp": "2025-03-05T05:07:22.672Z",
+      "transactTime": "2025-03-05T05:07:22.626Z"
+    },
+    {
+      "symbol": "XBTUSD",
+      "id": 86613073051,
+      "side": "Buy",
+      "price": 86886.7,
+      "timestamp": "2025-03-05T05:07:22.672Z",
+      "transactTime": "2025-03-05T05:07:22.630Z"
+    },
+    {
+      "symbol": "XBTUSD",
+      "id": 86613073047,
+      "side": "Buy",
+      "price": 86874.6,
+      "timestamp": "2025-03-05T05:07:22.672Z",
+      "transactTime": "2025-03-05T05:07:22.647Z"
+    },
+    {
+      "symbol": "XBTUSD",
+      "id": 86613070384,
+      "side": "Buy",
+      "price": 86913.0,
+      "timestamp": "2025-03-05T05:07:22.672Z",
+      "transactTime": "2025-03-05T05:07:22.630Z"
+    }
+  ]
+}
+{
+  "table": "orderBookL2",
+  "action": "insert",
+  "data": [
+    {
+      "symbol": "XBTUSD",
+      "id": 86613074962,
+      "side": "Sell",
+      "size": 16500,
+      "price": 86968.1,
+      "timestamp": "2025-03-05T05:07:22.672Z",
+      "transactTime": "2025-03-05T05:07:22.639Z"
+    },
+    {
+      "symbol": "XBTUSD",
+      "id": 86613074972,
+      "side": "Buy",
+      "size": 3000,
+      "price": 86887.8,
+      "timestamp": "2025-03-05T05:07:22.672Z",
+      "transactTime": "2025-03-05T05:07:22.641Z"
+    },
+    {
+      "symbol": "XBTUSD",
+      "id": 86613074977,
+      "side": "Buy",
+      "size": 3000,
+      "price": 86887.7,
+      "timestamp": "2025-03-05T05:07:22.672Z",
+      "transactTime": "2025-03-05T05:07:22.642Z"
+    },
+    {
+      "symbol": "XBTUSD",
+      "id": 86613074957,
+      "side": "Buy",
+      "size": 32800,
+      "price": 86913.1,
+      "timestamp": "2025-03-05T05:07:22.672Z",
+      "transactTime": "2025-03-05T05:07:22.664Z"
+    },
+    {
+      "symbol": "XBTUSD",
+      "id": 86613074925,
+      "side": "Buy",
+      "size": 106600,
+      "price": 86882.7,
+      "timestamp": "2025-03-05T05:07:22.672Z",
+      "transactTime": "2025-03-05T05:07:22.630Z"
+    },
+    {
+      "symbol": "XBTUSD",
+      "id": 86613074966,
+      "side": "Buy",
+      "size": 9200,
+      "price": 86913.2,
+      "timestamp": "2025-03-05T05:07:22.672Z",
+      "transactTime": "2025-03-05T05:07:22.669Z"
+    },
+    {
+      "symbol": "XBTUSD",
+      "id": 86613074993,
+      "side": "Buy",
+      "size": 120800,
+      "price": 86869.3,
+      "timestamp": "2025-03-05T05:07:22.672Z",
+      "transactTime": "2025-03-05T05:07:22.647Z"
+    }
+  ]
+}
+// order book l2 response bitmex
+{
+  "table": "orderBookL2_25",
+  "action": "delete",
+  "data": [
+    {
+      "symbol": "XBTUSD",
+      "id": 86626806070,
+      "side": "Sell",
+      "price": 87156.3,
+      "timestamp": "2025-03-05T06:30:56.338Z",
+      "transactTime": "2025-03-05T06:30:56.306Z"
+    },
+    {
+      "symbol": "XBTUSD",
+      "id": 86626812572,
+      "side": "Sell",
+      "price": 87152.8,
+      "timestamp": "2025-03-05T06:30:56.338Z",
+      "transactTime": "2025-03-05T06:30:56.335Z"
+    },
+    {
+      "symbol": "XBTUSD",
+      "id": 86626813306,
+      "side": "Sell",
+      "price": 87142.1,
+      "timestamp": "2025-03-05T06:30:56.338Z",
+      "transactTime": "2025-03-05T06:30:56.333Z"
+    },
+    {
+      "symbol": "XBTUSD",
+      "id": 86626809500,
+      "side": "Sell",
+      "price": 87157.7,
+      "timestamp": "2025-03-05T06:30:56.338Z",
+      "transactTime": "2025-03-05T06:30:56.302Z"
+    },
+    {
+      "symbol": "XBTUSD",
+      "id": 86626813131,
+      "side": "Buy",
+      "price": 87104.7,
+      "timestamp": "2025-03-05T06:30:56.338Z",
+      "transactTime": "2025-03-05T06:30:56.291Z"
+    }
+  ]
+}
+{
+  "table": "orderBookL2_25",
+  "action": "update",
+  "data": [
+    {
+      "symbol": "XBTUSD",
+      "id": 86626813230,
+      "side": "Buy",
+      "size": 27200,
+      "price": 87107.6,
+      "timestamp": "2025-03-05T06:30:56.338Z",
+      "transactTime": "2025-03-05T06:30:56.291Z"
+    }
+  ]
+}
+{
+  "table": "orderBookL2_25",
+  "action": "insert",
+  "data": [
+    {
+      "symbol": "XBTUSD",
+      "id": 86626810048,
+      "side": "Sell",
+      "size": 10700,
+      "price": 87165.2,
+      "timestamp": "2025-03-05T06:30:56.338Z",
+      "transactTime": "2025-03-05T06:30:55.463Z"
+    },
+    {
+      "symbol": "XBTUSD",
+      "id": 86624577948,
+      "side": "Sell",
+      "size": 100,
+      "price": 87164.2,
+      "timestamp": "2025-03-05T06:30:56.338Z",
+      "transactTime": "2025-03-05T06:30:55.966Z"
+    },
+    {
+      "symbol": "XBTUSD",
+      "id": 86626813696,
+      "side": "Sell",
+      "size": 46500,
+      "price": 87156.2,
+      "timestamp": "2025-03-05T06:30:56.338Z",
+      "transactTime": "2025-03-05T06:30:56.335Z"
+    },
+    {
+      "symbol": "XBTUSD",
+      "id": 86626813608,
+      "side": "Sell",
+      "size": 5900,
+      "price": 87156.3,
+      "timestamp": "2025-03-05T06:30:56.338Z",
+      "transactTime": "2025-03-05T06:30:56.307Z"
+    },
+    {
+      "symbol": "XBTUSD",
+      "id": 86626813686,
+      "side": "Buy",
+      "size": 16400,
+      "price": 87104.8,
+      "timestamp": "2025-03-05T06:30:56.338Z",
+      "transactTime": "2025-03-05T06:30:56.333Z"
+    }
+  ]
+}
+// order book 10 response bitmex
+{
+  "table": "orderBook10",
+  "action": "update",
+  "data": [
+    {
+      "symbol": "XBTUSD",
+      "bids": [
+        [
+          87370.2,
+          66600
+        ],
+        [
+          87370.0,
+          4300
+        ],
+        [
+          87369.8,
+          1900
+        ],
+        [
+          87366.8,
+          12500
+        ],
+        [
+          87361.7,
+          20900
+        ],
+        [
+          87361.6,
+          50000
+        ],
+        [
+          87361.4,
+          17000
+        ],
+        [
+          87359.0,
+          2700
+        ],
+        [
+          87357.3,
+          29400
+        ],
+        [
+          87357.2,
+          48000
+        ]
+      ],
+      "asks": [
+        [
+          87370.3,
+          8200
+        ],
+        [
+          87380.0,
+          400
+        ],
+        [
+          87385.0,
+          500
+        ],
+        [
+          87390.0,
+          12500
+        ],
+        [
+          87396.1,
+          3800
+        ],
+        [
+          87396.2,
+          11600
+        ],
+        [
+          87397.1,
+          1000
+        ],
+        [
+          87397.4,
+          10400
+        ],
+        [
+          87398.0,
+          15000
+        ],
+        [
+          87398.6,
+          2700
+        ]
+      ],
+      "timestamp": "2025-03-05T06:44:03.565Z"
+    }
+  ]
+}
+{
+  "table": "orderBook10",
+  "action": "update",
+  "data": [
+    {
+      "symbol": "XBTUSD",
+      "bids": [
+        [
+          86858.0,
+          12600
+        ],
+        [
+          86856.4,
+          2000
+        ],
+        [
+          86853.8,
+          8300
+        ],
+        [
+          86853.6,
+          1000
+        ],
+        [
+          86852.1,
+          26600
+        ],
+        [
+          86849.0,
+          6700
+        ],
+        [
+          86848.9,
+          6000
+        ],
+        [
+          86847.2,
+          16400
+        ],
+        [
+          86847.1,
+          22500
+        ],
+        [
+          86846.6,
+          16400
+        ]
+      ],
+      "asks": [
+        [
+          86865.0,
+          200
+        ],
+        [
+          86870.0,
+          200
+        ],
+        [
+          86875.7,
+          1000
+        ],
+        [
+          86877.8,
+          2000
+        ],
+        [
+          86878.1,
+          25500
+        ],
+        [
+          86878.4,
+          50000
+        ],
+        [
+          86878.6,
+          12600
+        ],
+        [
+          86880.6,
+          6000
+        ],
+        [
+          86881.3,
+          16400
+        ],
+        [
+          86881.4,
+          16400
+        ]
+      ],
+      "timestamp": "2025-03-05T05:28:23.063Z"
+    }
+  ]
+}
+{
+  "table": "orderBook10",
+  "action": "update",
+  "data": [
+    {
+      "symbol": "XBTUSD",
+      "bids": [
+        [
+          86858.0,
+          12600
+        ],
+        [
+          86856.4,
+          2000
+        ],
+        [
+          86853.8,
+          8300
+        ],
+        [
+          86853.6,
+          1000
+        ],
+        [
+          86852.1,
+          26600
+        ],
+        [
+          86849.0,
+          6700
+        ],
+        [
+          86848.9,
+          6000
+        ],
+        [
+          86847.2,
+          16400
+        ],
+        [
+          86847.1,
+          19100
+        ],
+        [
+          86846.6,
+          16400
+        ]
+      ],
+      "asks": [
+        [
+          86865.0,
+          200
+        ],
+        [
+          86870.0,
+          200
+        ],
+        [
+          86875.7,
+          1000
+        ],
+        [
+          86877.8,
+          2000
+        ],
+        [
+          86878.1,
+          25500
+        ],
+        [
+          86878.4,
+          50000
+        ],
+        [
+          86878.6,
+          12600
+        ],
+        [
+          86880.6,
+          6000
+        ],
+        [
+          86881.3,
+          16400
+        ],
+        [
+          86881.4,
+          16400
+        ]
+      ],
+      "timestamp": "2025-03-05T05:28:23.112Z"
+    }
+  ]
+}
+// trade response bitmex
+{
+  "table": "trade",
+  "action": "insert",
+  "data": [
+    {
+      "timestamp": "2025-03-05T06:44:03.570Z",
+      "symbol": "XBTUSD",
+      "side": "Buy",
+      "size": 300,
+      "price": 87370.3,
+      "tickDirection": "ZeroMinusTick",
+      "trdMatchID": "00000000-006d-1000-0000-00142b6f1712",
+      "grossValue": 343365,
+      "homeNotional": 0.00343365,
+      "foreignNotional": 300.0,
+      "trdType": "Regular"
+    }
+  ]
+}
+// intstrument response bitmex
+{
+  "table": "instrument",
+  "action": "update",
+  "data": [
+    {
+      "symbol": "XBTUSD",
+      "openInterest": 273637600,
+      "openValue": 313074250912,
+      "timestamp": "2025-03-05T06:44:03.099Z"
+    }
+  ]
+}
+{
+  "table": "instrument",
+  "action": "update",
+  "data": [
+    {
+      "symbol": "XBTUSD",
+      "lastPrice": 87370.3,
+      "lastTickDirection": "ZeroMinusTick",
+      "timestamp": "2025-03-05T06:44:02.116Z"
+    }
+  ]
+}
+{
+  "table": "instrument",
+  "action": "update",
+  "data": [
+    {
+      "symbol": "XBTUSD",
+      "lastPrice": 87370.0,
+      "lastChangePcnt": 0.0457,
+      "timestamp": "2025-03-05T06:44:01.418Z"
+    }
+  ]
+}
