@@ -38,7 +38,7 @@ export default function FormLogin() {
           inputMode='text'
           value={username}
           onChange={(value: string) => {
-            setUsername(value);
+            setUsername(value?.trim());
             setMessage('');
           }}
           isError={message.length > 0}
