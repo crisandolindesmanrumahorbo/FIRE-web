@@ -1,13 +1,11 @@
 'use server';
 
-const URL = 'http://127.0.0.1:7879';
-
 export const login = async (username: string, password: string) => {
   const body = JSON.stringify({
     username,
     password,
   });
-  const response = await fetch(`${URL}/login`, {
+  const response = await fetch(`${process.env.BASE_URL}/login`, {
     method: 'POST',
     body,
   });
