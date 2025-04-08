@@ -20,7 +20,7 @@ export async function middleware(request: NextRequest) {
       const headers = new Headers();
       headers.append('Authorization', `Bearer ${tokenExist}`);
       const response = await fetch(`${process.env.BASE_URL}/validate`, {
-        method: 'POST',
+        method: 'GET',
         headers: headers,
         cache: 'no-store',
       });
