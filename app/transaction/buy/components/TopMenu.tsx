@@ -5,13 +5,14 @@ import { useWsOrder } from '@/app/store/order';
 import Avatar from './Avatar';
 import { deleteToken } from '@/app/utils/cookies';
 import { useRouter } from 'next/navigation';
+import ThemeToggle from '@/app/theme/ThemeToggle';
 
 export default function TopMenu() {
   const router = useRouter();
   const readyOrder = useWsOrder((state) => state.readyState);
   const readyMarket = useMarket((state) => state.readyState);
   return (
-    <div className='sticky top-0 h-[60px] bg-black w-full'>
+    <div className='sticky top-0 h-[60px]w-full'>
       <div className='flex justify-end mx-4 h-full items-center'>
         <div className='flex flex-col gap-1 mr-2'>
           <div className='relative'>
@@ -38,6 +39,9 @@ export default function TopMenu() {
               M
             </div>
           </div>
+        </div>
+        <div className='mx-2'>
+        <ThemeToggle />
         </div>
         <Dropdown
           items={[{ label: 'Sign Out', value: 'Sign Out' }]}

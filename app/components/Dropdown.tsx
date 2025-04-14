@@ -34,7 +34,7 @@ const Dropdown = ({
       <div
         ref={dropdownRef}
         className={`absolute ${isOpen ? 'block' : 'hidden'} 
-            bg-black right-0 left-auto w-48 min-w-max 
+            dark:bg-[var(--foreground)] bg-[var(--background)] right-0 left-auto w-48 min-w-max 
             rounded shadow-lg border border-gray-800 z-30
             max-h-[350px] overflow-y-auto`}
       >
