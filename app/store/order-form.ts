@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { IExpiry } from '../transaction/buy/components/BuyForm';
+import { IExpiry } from '../[lang]/transaction/buy/components/BuyForm';
 
 export enum WebSocketReadyState {
   CONNECTING = 0,

@@ -1,8 +1,9 @@
+import { withLinguiPage } from '@/app/hooks/useLingui';
 import Image from 'next/image';
+import Navbar from '../../theme/Navbar';
 import FormLogin from './components/FormLogin';
-import Navbar from '../theme/Navbar';
 
-export default function Login() {
+async function Login() {
   return (
     <>
       <Navbar />
@@ -24,3 +25,5 @@ export default function Login() {
     </>
   );
 }
+
+export default withLinguiPage(Login);

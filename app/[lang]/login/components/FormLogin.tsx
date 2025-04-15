@@ -2,11 +2,13 @@
 
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import Input from '../../components/Input';
-import { initCookies } from '../../utils/cookies';
+import Input from '../../../components/Input';
+import { initCookies } from '../../../utils/cookies';
 import { login } from '../service';
+import { Trans, useLingui } from '@lingui/react/macro'
 
 export default function FormLogin() {
+    const { t } = useLingui();
   const router = useRouter();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -42,7 +44,7 @@ export default function FormLogin() {
             setMessage('');
           }}
           isError={message.length > 0}
-          label={'Username'}
+          label={t`Username`}
         />
         <Input
           inputMode='password'
@@ -52,7 +54,7 @@ export default function FormLogin() {
             setMessage('');
           }}
           isError={message.length > 0}
-          label={'Password'}
+          label={t`Password`}
         />
       </div>
       <p className='text-red-400'>{message}</p>
@@ -61,7 +63,7 @@ export default function FormLogin() {
         className='font-semibold bg-green-800 px-2 py-2 w-full rounded mt-4 cursor-pointer hover:bg-white hover:text-green-800 border border-green-800  hover:outline-white text-white'
         type='submit'
       >
-        Login
+        <Trans>Login</Trans>
       </button>
     </form>
   );

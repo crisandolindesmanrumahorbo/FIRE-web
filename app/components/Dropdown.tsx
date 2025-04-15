@@ -2,7 +2,7 @@
 
 import useClickOutside from '@/app/hooks/useClickOutside';
 import { ReactElement, useRef, useState } from 'react';
-import { IExpiry } from '../transaction/buy/components/BuyForm';
+import { IExpiry } from '../[lang]/transaction/buy/components/BuyForm';
 
 const Dropdown = ({
   items,

@@ -1,3 +1,4 @@
+import { QueryParams, withLinguiPage } from '@/app/hooks/useLingui';
 import ActionButton from '../components/ActionButton';
 import BuyForm from '../components/BuyForm';
 import InitMarket from '../components/InitMarket';
@@ -6,9 +7,12 @@ import Orderbook from '../components/Orderbook';
 import ProductHeader from '../components/ProductHeader';
 import TopMenu from '../components/TopMenu';
 
-type Params = Promise<{ symbol: string }>;
+type Params = Promise<{ lang: string, symbol: string }>;
 
-export default async function Buy(props: { params: Params }) {
+const Buy = async (props: {
+  params: Params;
+  addtionalParams: QueryParams;
+}) => {
   const { symbol } = await props.params;
   return (
     <InitMarket>
@@ -17,7 +21,7 @@ export default async function Buy(props: { params: Params }) {
           <TopMenu />
           <div className='flex flex-col gap-4 mt-2'>
             <ProductHeader symbol={symbol} />
-            <BuyForm  />
+            <BuyForm />
             <Orderbook symbol={symbol} />
             <ActionButton symbol={symbol} />
           </div>
@@ -25,4 +29,6 @@ export default async function Buy(props: { params: Params }) {
       </InitOrder>
     </InitMarket>
   );
-}
+};
+
+export default withLinguiPage(Buy);
