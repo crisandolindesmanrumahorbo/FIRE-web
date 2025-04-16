@@ -35,7 +35,7 @@ export default async function RootLayout({ children, params }: PropsWithChildren
           initialLocale={lang}
           initialMessages={allMessages[lang]!}
         >
-          <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+          <ThemeProvider attribute='class' defaultTheme='system'>
             {children}
           </ThemeProvider>
         </LinguiClientProvider>

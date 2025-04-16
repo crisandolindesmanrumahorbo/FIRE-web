@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import useListenSocket from '@/app/hooks/useListenSocket';
-import { useWsOrder } from '@/app/store/order';
-import { useForm } from '@/app/store/order-form';
-import { useEffect } from 'react';
+import useListenSocket from "@/app/hooks/useListenSocket";
+import { useWsOrder } from "@/app/store/order";
+import { useForm } from "@/app/store/order-form";
+import { useEffect } from "react";
 
 export default function ActionButton({ symbol }: { symbol: string }) {
   const socket = useWsOrder((state) => state.socket);
@@ -20,9 +20,9 @@ export default function ActionButton({ symbol }: { symbol: string }) {
   }, [data]);
 
   return (
-    <div className='fixed bottom-0 w-full px-4'>
+    <div className="fixed bottom-0 w-full px-4">
       <button
-        className='mb-2 rounded text-center w-full p-2 bg-green-600'
+        className="mb-2 rounded text-center w-full p-2 bg-green-600 text-white"
         onClick={() => {
           if (socket) {
             const message = {

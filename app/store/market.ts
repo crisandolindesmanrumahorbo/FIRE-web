@@ -1,6 +1,6 @@
-import { create } from 'zustand';
-import { useOrderBook } from './ordebook';
-import { MarketDataDetailInfo, useCurrentPrice } from './current-price';
+import { create } from "zustand";
+import { useOrderBook } from "./ordebook";
+import { MarketDataDetailInfo, useCurrentPrice } from "./current-price";
 
 export enum WebSocketReadyState {
   CONNECTING = 0,
@@ -20,7 +20,7 @@ const setOrderbook = useOrderBook.getState().setOrderbook;
 const setCurrentPriceMap = useCurrentPrice.getState().setCurrentPriceMap;
 
 const mapCurrentPrice = (
-  currentPrice: MarketDataDetailInfo
+  currentPrice: MarketDataDetailInfo,
 ): MarketDataDetailInfo => {
   return {
     symbol: currentPrice.symbol,
@@ -33,7 +33,7 @@ export const useMarket = create<MarketSocketStore>((set) => ({
   socket: undefined,
   readyState: 3,
   initWS: (url: string) => {
-    const socket = new WebSocket(url ?? 'wss://api.whitebit.com/ws');
+    const socket = new WebSocket(url ?? "wss://api.whitebit.com/ws");
 
     socket.onopen = () => {
       set({ readyState: socket.readyState });
@@ -43,11 +43,11 @@ export const useMarket = create<MarketSocketStore>((set) => ({
     socket.onmessage = (event: MessageEvent) => {
       const message = event.data;
       const data = JSON.parse(message);
-      if (data?.table === 'orderBook10') {
+      if (data?.table === "orderBook10") {
         setOrderbook(data.data[0]);
         return;
       }
-      if (data?.table === 'instrument') {
+      if (data?.table === "instrument") {
         const message = data.data[0];
         const currentPrice = mapCurrentPrice(message);
         setCurrentPriceMap(currentPrice);

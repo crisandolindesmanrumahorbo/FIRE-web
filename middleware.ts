@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import linguiConfig from "./lingui.config";
-import Negotiator from "negotiator";
 
 const { locales } = linguiConfig;
 
@@ -16,7 +15,10 @@ export async function middleware(request: NextRequest) {
 
   if (!pathnameHasLocale) {
     // Redirect if there is no locale
-    const locale = getRequestLocale(request.headers);
+    const url = request.headers.get("referer")
+      ? new URL(request.headers.get("referer") || "")
+      : ({} as { pathname: string });
+    const locale = url.pathname?.split("/")?.[1] || "en";
     request.nextUrl.pathname = `/${locale}${pathname}`;
     // e.g. incoming request is /products
     // The new URL is now /en/products
@@ -30,7 +32,7 @@ export async function middleware(request: NextRequest) {
   // 4. macro
   // 5. portfolio with aggreate sql maybe popular web server
   // 6. unit testing -- DONE
-  // 7. Multi language
+  // 7. Multi language -- DONE
 
   // Already logged in, allow access
   if (tokenExist && !isAuth) {
@@ -56,17 +58,6 @@ export async function middleware(request: NextRequest) {
   }
 
   return NextResponse.next();
-}
-
-function getRequestLocale(requestHeaders: Headers): string {
-  const langHeader = requestHeaders.get("accept-language") || undefined;
-  const languages = new Negotiator({
-    headers: { "accept-language": langHeader },
-  }).languages(locales.slice());
-
-  const activeLocale = languages[0] || locales[0] || "en";
-
-  return activeLocale;
 }
 
 export const config = {

@@ -16,11 +16,9 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .dark body {
   color: var(--background);
   background: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
