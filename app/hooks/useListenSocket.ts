@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const useListenSocket = ({ socket }: { socket?: WebSocket }) => {
   const [data, setData] = useState();
@@ -10,9 +10,9 @@ const useListenSocket = ({ socket }: { socket?: WebSocket }) => {
         const data = event.data;
         setData(data);
       };
-      socket.addEventListener('message', handleMessage);
+      socket.addEventListener("message", handleMessage);
       return () => {
-        socket.removeEventListener('message', handleMessage);
+        socket.removeEventListener("message", handleMessage);
       };
     }
   }, [socket]);
