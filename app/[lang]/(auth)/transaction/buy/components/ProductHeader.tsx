@@ -1,9 +1,9 @@
 "use client";
 import { useCurrentPrice } from "@/app/store/current-price";
 import { numberWithCommas } from "@/app/utils/number";
-import Card from "../../../../components/Card";
 import Avatar from "./Avatar";
 import SubscribeCurrentPrice from "./SubscribeCurrentPrice";
+import Card from '@/app/components/Card';
 
 export default function ProductHeader({ symbol }: { symbol: string }) {
   const currentPriceMap = useCurrentPrice((state) => state.currentPriceMap);

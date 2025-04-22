@@ -5,7 +5,6 @@ import InitMarket from "../components/InitMarket";
 import InitOrder from "../components/InitOrder";
 import Orderbook from "../components/Orderbook";
 import ProductHeader from "../components/ProductHeader";
-import TopMenu from "../components/TopMenu";
 
 type Params = Promise<{ lang: string; symbol: string }>;
 
@@ -15,7 +14,6 @@ const Buy = async (props: { params: Params; addtionalParams: QueryParams }) => {
     <InitMarket>
       <InitOrder>
         <>
-          <TopMenu />
           <div className="flex flex-col gap-4 mt-2">
             <ProductHeader symbol={symbol} />
             <BuyForm />

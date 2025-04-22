@@ -20,7 +20,7 @@ export default function ActionButton({ symbol }: { symbol: string }) {
   }, [data]);
 
   return (
-    <div className="fixed bottom-0 w-full px-4">
+    <div className="fixed bottom-0 w-[calc(100%-3rem)] px-4">
       <button
         className="mb-2 rounded text-center w-full p-2 bg-green-600 text-white"
         onClick={() => {

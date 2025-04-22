@@ -1,12 +1,12 @@
 'use client';
 import { useForm } from '@/app/store/order-form';
 import { useEffect, useState } from 'react';
-import Card from '../../../../components/Card';
-import Dropdown from '../../../../components/Dropdown';
-import IconArrowDown from '../../../../components/IconArrow';
-import Input from '../../../../components/InputPrice';
-import RangeSlider from '../../../../components/RangeSlider';
 import { numberWithCommas } from '@/app/utils/number';
+import Card from '@/app/components/Card';
+import RangeSlider from '@/app/components/RangeSlider';
+import Dropdown from '@/app/components/Dropdown';
+import IconArrowDown from '@/app/components/IconArrow';
+import Input from '@/app/components/InputPrice';
 
 export interface IExpiry {
   value: string;

@@ -22,10 +22,12 @@ export const metadata: Metadata = {
   description: 'Support by Next and Rust',
 };
 
-
-export default async function RootLayout({ children, params }: PropsWithChildren<PageLangParam>) {
-  const lang = (await params).lang
-  initLingui(lang)
+export default async function RootLayout({
+  children,
+  params,
+}: PropsWithChildren<PageLangParam>) {
+  const lang = (await params).lang;
+  initLingui(lang);
   return (
     <html lang={lang} suppressHydrationWarning>
       <body
