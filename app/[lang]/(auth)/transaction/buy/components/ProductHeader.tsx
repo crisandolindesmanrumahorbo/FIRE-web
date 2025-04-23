@@ -3,23 +3,41 @@ import { useCurrentPrice } from "@/app/store/current-price";
 import { numberWithCommas } from "@/app/utils/number";
 import Avatar from "./Avatar";
 import SubscribeCurrentPrice from "./SubscribeCurrentPrice";
-import Card from '@/app/components/Card';
+import Card from "@/app/components/Card";
+import { useRouter } from "next/navigation";
 
-export default function ProductHeader({ symbol }: { symbol: string }) {
+export default function ProductHeader({
+  symbol,
+  clickable,
+}: {
+  symbol: string;
+  clickable?: boolean;
+}) {
   const currentPriceMap = useCurrentPrice((state) => state.currentPriceMap);
   const stock = {
     symbol: symbol,
-    name: "Bitcoin",
+    name: `Coin ${symbol}`,
     tag: ["S"],
     price: currentPriceMap[symbol]?.lastPrice,
     price_change: currentPriceMap[symbol]?.lastChangePcnt,
     image: "/btc.png",
   };
+  const router = useRouter();
 
   return (
     <SubscribeCurrentPrice symbol={symbol}>
       <Card>
-        <div className="flex gap-4 w-full items-center">
+        <div
+          className={`flex gap-4 w-full items-center ${clickable ? "cursor-pointer" : ""}`}
+          onClick={
+            clickable
+              ? (e) => {
+                  e.stopPropagation();
+                  router.push(`/en/transaction/buy/${symbol}`);
+                }
+              : undefined
+          }
+        >
           <Avatar path={stock.image} />
           <div className="flex justify-between w-full">
             <div>
