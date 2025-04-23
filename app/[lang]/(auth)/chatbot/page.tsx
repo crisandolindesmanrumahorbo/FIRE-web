@@ -10,43 +10,10 @@ type Message = {
   timestamp: Date;
 };
 
-const message: string = `
-Okay, here are two lines of wording, aiming for different tones and styles:
-
-**Option 1 (Formal u0026 Concise):**
-
-"The future demands innovation."
-
-**Option 2 (Casual u0026 Engaging):**
-
-"Let's chase those dreams, one step at a time." 
-
----
-
-To help me tailor them better, could you tell me:
-
-*   **What context are these words for?** (e.g., a business email, a social media post, a poem, etc.)
-*   **What's the overall feeling or message you're trying to convey?***   `;
-
 const initial: Message[] = [
   {
-    role: "user",
-    content: "hai",
-    timestamp: new Date(),
-  },
-  {
     role: "bot",
-    content: "hai",
-    timestamp: new Date(),
-  },
-  {
-    role: "user",
-    content: "ada apa denganmu?",
-    timestamp: new Date(),
-  },
-  {
-    role: "bot",
-    content: message,
+    content: "Hi, whats poppin",
     timestamp: new Date(),
   },
 ];
@@ -75,7 +42,6 @@ export default function Chatbot() {
       prompt,
     };
     e.preventDefault();
-    console.log("masuk");
     const new_msg = {
       role: "user",
       content: prompt,
@@ -144,7 +110,7 @@ export default function Chatbot() {
         </div>
 
         <div className="fixed bottom-0 w-full dark:bg-[var(--foreground)] bg-[var(--background)] flex justify-center">
-          <div className="flex max-w-[1000px] w-[80%] border p-2 mb-10 rounded-2xl">
+          <div className="flex max-w-[1000px] w-[70%] border p-2 mb-10 rounded-2xl">
             <form
               className="w-full flex"
               onSubmit={(e) => {
@@ -189,7 +155,6 @@ export default function Chatbot() {
             </form>
           </div>
         </div>
-        {/* </form> */}
       </div>
     </>
   );
