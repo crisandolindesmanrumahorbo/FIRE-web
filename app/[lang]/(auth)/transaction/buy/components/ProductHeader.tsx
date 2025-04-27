@@ -17,7 +17,7 @@ export default function ProductHeader({
   const stock = {
     symbol: symbol,
     name: `Coin ${symbol}`,
-    tag: ["S"],
+    tag: symbol.includes("ETH") ? ["S", "TL"] : ["S", "TB"],
     price: currentPriceMap[symbol]?.lastPrice,
     price_change: currentPriceMap[symbol]?.lastChangePcnt,
     image: "/btc.png",
@@ -69,8 +69,8 @@ const Tags = ({ tags }: { tags: string[] }) => {
     {
       name: "TB",
       style: (tag: string) => (
-        <span key={tag} className="border border-[#473B53] h-fit">
-          <p className="text-[#473B53] text-[10px] items-center p-[2px]">
+        <span key={tag} className="border border-purple-500 h-fit rounded">
+          <p className="text-purple-500 text-[10px] items-center py-[2px] mx-1 font-semibold">
             {tag}
           </p>
         </span>
@@ -79,8 +79,8 @@ const Tags = ({ tags }: { tags: string[] }) => {
     {
       name: "TL",
       style: (tag: string) => (
-        <span key={tag} className="border border-green-300 h-fit">
-          <p className="text-green-300 text-[10px] items-center p-[2px]">
+        <span key={tag} className="border border-yellow-700 h-fit rounded">
+          <p className="text-yellow-700 text-[10px] items-center py-[2px] mx-2 font-semibold">
             {tag}
           </p>
         </span>

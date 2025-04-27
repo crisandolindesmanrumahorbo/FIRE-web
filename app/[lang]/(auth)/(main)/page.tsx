@@ -20,7 +20,6 @@ import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import ProductHeader from "../transaction/buy/components/ProductHeader";
 import InitMarket from "../transaction/buy/components/InitMarket";
-import Card from "@/app/components/Card";
 
 export default function App() {
   const [items, setItems] = useState(["ETHUSD", "XBTUSD"]);
@@ -39,14 +38,14 @@ export default function App() {
         onDragEnd={handleDragEnd}
       >
         <SortableContext items={items} strategy={verticalListSortingStrategy}>
-          <Card className="mt-4">
+          <div className="mt-4 border rounded sm:mx-4 mx-2 sm:p-4 p-2 border-gray-800 ">
             <div className="flex flex-col gap-2">
               <p>Watchlist</p>
               {items.map((id, i) => (
                 <SortableItem key={i} symbol={id} />
               ))}
             </div>
-          </Card>
+          </div>
         </SortableContext>
       </DndContext>
     </InitMarket>
@@ -58,7 +57,6 @@ export default function App() {
 
     if (active.id !== over.id) {
       setItems((items) => {
-        console.log(active.id);
         const oldIndex = items.indexOf(active.id);
         const newIndex = items.indexOf(over.id);
 
