@@ -1,7 +1,7 @@
-'use client';
-import { useWsOrder, WebSocketReadyState } from '@/app/store/order';
-import { getTokenCookies } from '@/app/utils/cookies';
-import { ReactElement, useEffect } from 'react';
+"use client";
+import { useWsOrder, WebSocketReadyState } from "@/app/store/order";
+import { getTokenCookies } from "@/app/utils/cookies";
+import { ReactElement, useEffect } from "react";
 
 export default function InitOrder({ children }: { children: ReactElement }) {
   const initWs = useWsOrder((state) => state.initWS);
@@ -12,7 +12,7 @@ export default function InitOrder({ children }: { children: ReactElement }) {
     const init = async () => {
       const token = await getTokenCookies();
       if (!socket && readyState !== WebSocketReadyState.OPEN) {
-        initWs(`ws://127.0.0.1:7878?token=${token}`);
+        initWs(`ws://127.0.0.1:7878/order/ws?token=${token}`);
       }
     };
     init();
