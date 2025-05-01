@@ -51,7 +51,7 @@ export default function TopMenu() {
           }}
         >
           <div className="mt-2">
-            <Avatar path="/btc.png" />
+            <Avatar path="/fire.png" />
           </div>
         </Dropdown>
       </div>

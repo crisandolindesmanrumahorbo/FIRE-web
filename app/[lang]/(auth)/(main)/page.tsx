@@ -20,9 +20,12 @@ import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import ProductHeader from "../transaction/buy/components/ProductHeader";
 import InitMarket from "../transaction/buy/components/InitMarket";
+import { PRODUCTS } from "@/app/constants/product";
+
+const productsName = PRODUCTS.map((product) => product.symbol);
 
 export default function App() {
-  const [items, setItems] = useState(["ETHUSD", "XBTUSD"]);
+  const [items, setItems] = useState(productsName);
   const sensors = useSensors(
     useSensor(PointerSensor),
     useSensor(KeyboardSensor, {

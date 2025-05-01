@@ -5,6 +5,7 @@ import Avatar from "./Avatar";
 import SubscribeCurrentPrice from "./SubscribeCurrentPrice";
 import Card from "@/app/components/Card";
 import { useRouter } from "next/navigation";
+import { Product, PRODUCTS } from "@/app/constants/product";
 
 export default function ProductHeader({
   symbol,
@@ -14,14 +15,23 @@ export default function ProductHeader({
   clickable?: boolean;
 }) {
   const currentPriceMap = useCurrentPrice((state) => state.currentPriceMap);
-  const stock = {
-    symbol: symbol,
-    name: `Coin ${symbol}`,
-    tag: symbol.includes("ETH") ? ["S", "TL"] : ["S", "TB"],
-    price: currentPriceMap[symbol]?.lastPrice,
-    price_change: currentPriceMap[symbol]?.lastChangePcnt,
-    image: "/btc.png",
-  };
+  const product: Product | undefined = PRODUCTS.find(
+    (product) => product.symbol === symbol,
+  );
+  const stock = product
+    ? {
+        ...product,
+        price: currentPriceMap[symbol]?.lastPrice,
+        price_change: currentPriceMap[symbol]?.lastChangePcnt,
+      }
+    : {
+        symbol: "",
+        name: "",
+        image: "",
+        tag: [""],
+        price: 0,
+        price_change: 0,
+      };
   const router = useRouter();
 
   return (
