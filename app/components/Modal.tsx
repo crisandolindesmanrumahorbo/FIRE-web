@@ -1,18 +1,27 @@
+"use client";
+
+import { useRef } from "react";
+import useClickOutside from "../hooks/useClickOutside";
+
 type Props = {
   children: React.ReactNode;
   open: boolean;
-  onClose: () => void;
+  onCloseAction: () => void;
   title?: string;
 };
 
-export default function Modal({ open, onClose, title, children }: Props) {
+export default function Modal({ open, onCloseAction, title, children }: Props) {
+  const modalRef = useRef<HTMLDivElement | null>(null);
+
+  useClickOutside(modalRef, () => onCloseAction());
+
   return (
     <>
       <div
         className={`${open ? "block" : "hidden"} fixed top-0 right-0 left-0 bottom-0 w-full z-50`}
       >
         <div className="flex w-full h-full justify-center items-center">
-          <div className="w-[500px] bg-white rounded">
+          <div ref={modalRef} className="w-[500px] bg-white rounded">
             <div className="flex-col w-full h-full p-4">
               <div className="flex w-full h-8">
                 <div className="w-full items-center flex justify-center">
@@ -22,7 +31,7 @@ export default function Modal({ open, onClose, title, children }: Props) {
                 </div>
                 <button
                   className="items-center flex justify-center"
-                  onClick={onClose}
+                  onClick={onCloseAction}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
