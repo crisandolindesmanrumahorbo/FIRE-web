@@ -1,5 +1,5 @@
-import { create } from 'zustand';
-import { IExpiry } from '../[lang]/transaction/buy/components/BuyForm';
+import { create } from "zustand";
+import { IExpiry } from "../[lang]/(auth)/transaction/buy/components/BuyForm";
 
 export enum WebSocketReadyState {
   CONNECTING = 0,
@@ -23,19 +23,19 @@ export type FormStore = {
 export const useForm = create<FormStore>((set) => ({
   price: 1000,
   lot: 0,
-  symbol: '',
+  symbol: "",
   expiry: {
-    value: 'GFD',
-    label: 'Good For Day',
+    value: "GFD",
+    label: "Good For Day",
   },
   reset: () =>
     set({
       price: 1000,
       lot: 0,
-      symbol: '',
+      symbol: "",
       expiry: {
-        value: 'GFD',
-        label: 'Good For Day',
+        value: "GFD",
+        label: "Good For Day",
       },
     }),
   setPrice: (data) => {

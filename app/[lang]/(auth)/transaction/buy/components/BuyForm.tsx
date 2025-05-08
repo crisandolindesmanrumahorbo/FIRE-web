@@ -1,12 +1,12 @@
-'use client';
-import { useForm } from '@/app/store/order-form';
-import { useEffect, useState } from 'react';
-import { numberWithCommas } from '@/app/utils/number';
-import Card from '@/app/components/Card';
-import RangeSlider from '@/app/components/RangeSlider';
-import Dropdown from '@/app/components/Dropdown';
-import IconArrowDown from '@/app/components/IconArrow';
-import Input from '@/app/components/InputPrice';
+"use client";
+import { useForm } from "@/app/store/order-form";
+import { useEffect, useState } from "react";
+import { numberWithCommas } from "@/app/utils/number";
+import Card from "@/app/components/Card";
+import RangeSlider from "@/app/components/RangeSlider";
+import Dropdown from "@/app/components/Dropdown";
+import IconArrowDown from "@/app/components/IconArrow";
+import Input from "@/app/components/InputPrice";
 
 export interface IExpiry {
   value: string;
@@ -14,8 +14,8 @@ export interface IExpiry {
 }
 
 export const EXPIRY = [
-  { value: 'GFD', label: 'Good For Day' },
-  { value: 'GTC', label: 'Good Till Cancelled' },
+  { value: "GFD", label: "Good For Day" },
+  { value: "GTC", label: "Good Till Cancelled" },
 ];
 
 export default function BuyForm({}: { symbol?: string }) {
@@ -49,12 +49,12 @@ export default function BuyForm({}: { symbol?: string }) {
   };
   return (
     <Card>
-      <div className='flex flex-col gap-4'>
-        <div className='flex justify-between items-center'>
+      <div className="flex flex-col gap-4">
+        <div className="flex justify-between items-center">
           <p>Trading Balance</p>
           <p>{`$ ${numberWithCommas(tradingBalance)}`}</p>
         </div>
-        <div className='my-4'>
+        <div className="my-4">
           <RangeSlider
             value={slider}
             max={tradingBalance}
@@ -63,24 +63,24 @@ export default function BuyForm({}: { symbol?: string }) {
           />
         </div>
 
-        <div className='flex justify-between items-center'>
+        <div className="flex justify-between items-center">
           <p>Investment</p>
           <p>{`$ ${numberWithCommas(investment)}`}</p>
         </div>
-        <div className='flex justify-between items-center'>
+        <div className="flex justify-between items-center">
           <p>Price</p>
-          <Input step={100} value={price} setValue={setPrice} />
+          <Input dot step={100} value={price} setValue={setPrice} />
         </div>
-        <div className='flex justify-between items-center'>
+        <div className="flex justify-between items-center">
           <p>Lot</p>
           <Input step={1} value={lot} setValue={setLot} />
         </div>
-        <div className='flex justify-between items-center'>
+        <div className="flex justify-between items-center">
           <p>Expiry</p>
           <Dropdown items={EXPIRY} onChange={handleExpiryChange}>
-            <div className='border p-2 w-[180px] rounded border-gray-800'>
-              <div className='flex justify-between'>
-                <p className='text-xs'>{expiry.label}</p>
+            <div className="border p-2 w-[180px] rounded border-gray-800">
+              <div className="flex justify-between">
+                <p className="text-xs">{expiry.label}</p>
                 <IconArrowDown />
               </div>
             </div>
