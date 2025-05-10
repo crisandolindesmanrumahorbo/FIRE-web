@@ -84,7 +84,7 @@ const Community = ({ apiKey, userId, userName, userToken }: Props) => {
   if (!client) return <div>Setting up client & connection...</div>;
 
   return (
-    <Chat client={client}>
+    <Chat client={client} theme={"str-chat__theme-dark"}>
       <div className="flex h-[91vh]">
         <div className="w-[30%] h-min-screen">
           <ChannelList filters={filters} sort={sort} options={options} />
