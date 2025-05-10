@@ -28,6 +28,7 @@ import {
 } from "stream-chat-react";
 
 import "stream-chat-react/dist/css/v2/index.css";
+import { useTheme } from "next-themes";
 
 type Props = {
   apiKey: string;
@@ -37,6 +38,7 @@ type Props = {
 };
 
 const Community = ({ apiKey, userId, userName, userToken }: Props) => {
+  const { theme } = useTheme();
   const user: User = {
     id: userId,
     name: userName,
@@ -84,7 +86,12 @@ const Community = ({ apiKey, userId, userName, userToken }: Props) => {
   if (!client) return <div>Setting up client & connection...</div>;
 
   return (
-    <Chat client={client} theme={"str-chat__theme-dark"}>
+    <Chat
+      client={client}
+      theme={
+        theme !== "dark" ? "str-chat__theme-dark" : "str-chat__theme-light"
+      }
+    >
       <div className="flex h-[91vh]">
         <div className="w-[30%] h-min-screen">
           <ChannelList filters={filters} sort={sort} options={options} />
