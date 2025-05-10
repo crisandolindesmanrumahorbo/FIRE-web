@@ -1,8 +1,9 @@
 import IconBitcoin from "./IconBitcoin";
-import IconChatbot from "@/app/components/IconChatbot";
+import IconChat from "@/app/components/IconChat";
 import IconHome from "@/app/components/IconHome";
 import IconSignOut from "@/app/components/IconSignOut";
 import Link from "next/link";
+import IconChatbot from "./IconChatbot";
 
 export default function Sidebar({ open }: { open: boolean }) {
   return (
@@ -18,7 +19,7 @@ export default function Sidebar({ open }: { open: boolean }) {
               <p className="text-white">Home</p>
             </Link>
             <Link href={"/chatbot"} className="flex gap-2 items-center">
-              <IconChatbot />
+              <IconChat />
               <p className="text-white ">Chat</p>
             </Link>
             <Link
@@ -27,6 +28,10 @@ export default function Sidebar({ open }: { open: boolean }) {
             >
               <IconBitcoin />
               <p className="text-white ">Buy</p>
+            </Link>
+            <Link href={"/community"} className="flex gap-2 items-center">
+              <IconChatbot />
+              <p className="text-white ">Communities</p>
             </Link>
           </div>
 
@@ -49,10 +54,13 @@ export default function Sidebar({ open }: { open: boolean }) {
               <IconHome />
             </Link>
             <Link href={"/chatbot"} className="flex gap-2">
-              <IconChatbot />
+              <IconChat />
             </Link>
             <Link href={"/transaction/buy/ETHUSD"} className="flex gap-2">
               <IconBitcoin />
+            </Link>
+            <Link href={"/community"} className="flex gap-2">
+              <IconChatbot />
             </Link>
           </div>
 
