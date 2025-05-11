@@ -129,7 +129,7 @@ export default function Chatbot() {
                 value={prompt}
                 onChange={(e) => setPrompt(e.target.value)}
                 className={`
-                 w-full resize-none 
+                w-full resize-none 
                 max-h-[200px]  /* Maximum height before scrolling */
                 min-h-[44px]   /* Minimum height (like DeepSeek) */
                 py-2 px-3 
