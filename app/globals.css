@@ -36,3 +36,10 @@ body {
   font-weight: 600;
   color: inherit;
 }
+
+.tooltip {
+  @apply invisible fixed left-[50];
+}
+.has-tooltip:hover .tooltip {
+  @apply visible z-[9999]; /* High z-index to ensure it's above all */
+}

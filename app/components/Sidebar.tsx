@@ -4,35 +4,55 @@ import IconHome from "@/app/components/IconHome";
 import IconSignOut from "@/app/components/IconSignOut";
 import Link from "next/link";
 import IconChatbot from "./IconChatbot";
+import IconCart from "./IconCart";
 
 export default function Sidebar({ open }: { open: boolean }) {
+  const menus = [
+    {
+      name: "Home",
+      url: "/",
+      icon: <IconHome />,
+    },
+    {
+      name: "Buy",
+      url: "/transaction/buy/ETHUSD",
+      icon: <IconBitcoin />,
+    },
+    {
+      name: "Order",
+      url: "/order",
+      icon: <IconCart />,
+    },
+    {
+      name: "Chatbot",
+      url: "/chatbot",
+      icon: <IconChatbot />,
+    },
+
+    {
+      name: "Community",
+      url: "/community",
+      icon: <IconChat />,
+    },
+  ];
   return (
     <>
       <div
-        className={`${open ? "block" : "hidden"} fixed left-0 top-0 pt-15 w-[150px] h-full bg-opacity-75  bg-green-950
+        className={`${open ? "block" : "hidden"} fixed left-0 top-0 pt-15 w-[200px] h-full bg-opacity-75  bg-green-950
                         z-30 overflow-y-auto`}
       >
         <div className="flex flex-col justify-between bg-black h-full">
           <div className="flex flex-col gap-6 mt-2 justify-start w-full ml-3">
-            <Link href={"/"} className="flex gap-2 items-center">
-              <IconHome />
-              <p className="text-white">Home</p>
-            </Link>
-            <Link href={"/chatbot"} className="flex gap-2 items-center">
-              <IconChat />
-              <p className="text-white ">Chat</p>
-            </Link>
-            <Link
-              href={"/transaction/buy/ETHUSD"}
-              className="flex gap-2 items-center"
-            >
-              <IconBitcoin />
-              <p className="text-white ">Buy</p>
-            </Link>
-            <Link href={"/community"} className="flex gap-2 items-center">
-              <IconChatbot />
-              <p className="text-white ">Communities</p>
-            </Link>
+            {menus.map((menu, idx) => (
+              <Link
+                key={idx}
+                href={menu.url}
+                className="flex gap-2 items-center"
+              >
+                {menu.icon}
+                <p className="text-white ">{menu.name}</p>
+              </Link>
+            ))}
           </div>
 
           <Link
@@ -50,24 +70,28 @@ export default function Sidebar({ open }: { open: boolean }) {
       >
         <div className="flex flex-col justify-between bg-black h-full">
           <div className="flex flex-col gap-6 mt-2 justify-start w-full ml-3">
-            <Link href={"/"} className="flex gap-2">
-              <IconHome />
-            </Link>
-            <Link href={"/chatbot"} className="flex gap-2">
-              <IconChat />
-            </Link>
-            <Link href={"/transaction/buy/ETHUSD"} className="flex gap-2">
-              <IconBitcoin />
-            </Link>
-            <Link href={"/community"} className="flex gap-2">
-              <IconChatbot />
-            </Link>
+            {menus.map((menu, idx) => (
+              <Link
+                key={idx}
+                href={menu.url}
+                className="flex gap-2 has-tooltip"
+              >
+                <span className="tooltip py-1 px-2 rounded bg-black text-sm text-white">
+                  {menu.name}
+                </span>
+                {menu.icon}
+              </Link>
+            ))}
           </div>
 
           <Link
             href={"/login"}
-            className="mb-[20px] flex gap-2 ml-3 items-center"
+            className="mb-[20px] flex gap-2 ml-3 items-center has-tooltip"
           >
+            <span className="tooltip py-1 px-2 rounded bg-black text-sm text-white">
+              Log out
+            </span>
+
             <IconSignOut />
           </Link>
         </div>
