@@ -77,7 +77,7 @@ const Community = ({ apiKey, userId, userName, userToken }: Props) => {
     };
 
     setupChannels();
-  }, [client]);
+  }, [client, userId]);
 
   if (!client) return <div>Setting up client & connection...</div>;
 
@@ -88,8 +88,8 @@ const Community = ({ apiKey, userId, userName, userToken }: Props) => {
         theme !== "dark" ? "str-chat__theme-dark" : "str-chat__theme-light"
       }
     >
-      <div className="flex h-[91vh]">
-        <div className="w-[30%] h-min-screen">
+      <div className="flex h-[91vh] overflow-hidden">
+        <div className="sm:w-[30%] w-[20%] h-min-screen">
           <ChannelList filters={filters} sort={sort} options={options} />
         </div>
         <div className="w-full h-min-screen">

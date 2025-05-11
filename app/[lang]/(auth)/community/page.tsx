@@ -1,6 +1,6 @@
 import { getUser } from "@/app/utils/cookies";
-import Community from "./community";
 import { StreamChat } from "stream-chat";
+import Community from "./components/Community";
 
 export default async function CommunityPage() {
   const user = await getUser();
