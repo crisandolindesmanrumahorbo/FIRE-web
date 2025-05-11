@@ -8,7 +8,7 @@ async function Login() {
     <>
       <Navbar />
       <div className="w-full min-h-screen flex justify-center items-center">
-        <div className="flex xl:flex-row flex-col items-center gap-10 border border-gray-700 p-12 mx-4 rounded-lg h-full">
+        <div className="flex xl:flex-row flex-col items-center sm:gap-10 gap-2 border border-gray-700 p-12 mx-4 rounded-lg h-full">
           <div className="w-full items-center justify-center flex mb-6">
             <div className="relative sm:w-[400px] sm:h-[400px] w-[200px] h-[200px]">
               <Image
@@ -20,7 +20,7 @@ async function Login() {
             </div>
           </div>
 
-          <div className="h-full">
+          <div className="h-full w-full">
             <FormLogin />
           </div>
         </div>

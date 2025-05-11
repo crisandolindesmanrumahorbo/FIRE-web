@@ -48,9 +48,9 @@ function Typewriter() {
   }, [charIndex, isDeleting, messageIndex]);
 
   return (
-    <h2 className="text-4xl font-bold text-center min-h-[2.5rem]">
+    <h2 className="text-md sm:text-4xl font-bold  min-h-[2.5rem]">
       <span>{currentText}</span>
-      <span className="border-r-2 border-white animate-pulse ml-1" />
+      <span className="border-r-2 border-green-800 animate-pulse ml-1" />
     </h2>
   );
 }
@@ -78,7 +78,7 @@ export default function FormLogin() {
 
   return (
     <>
-      <div className="flex items-center mb-[60px]">
+      <div className="flex sm:justify-start justify-center items-center sm:mb-[60px] mb-[10px] sm:w-full w-[200px]">
         <Typewriter />
       </div>
       <form
