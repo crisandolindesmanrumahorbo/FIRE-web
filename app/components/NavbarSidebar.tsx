@@ -29,7 +29,7 @@ export default function NavbarSidebar({ children }: Props) {
       <Sidebar open={open} />
       <div
         className={`transition-all duration-300 ease-in-out mt-20
-                ${open ? "sm:ml-[155px] ml-[50px]" : "ml-[50px]"}`}
+                ${open ? "sm:ml-[205px] ml-[50px]" : "ml-[50px]"}`}
       >
         {children}
       </div>
