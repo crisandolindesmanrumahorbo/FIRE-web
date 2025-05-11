@@ -1,14 +1,35 @@
+import { getUser } from "@/app/utils/cookies";
 import Community from "./community";
+import { StreamChat } from "stream-chat";
 
-const userId = "crisandolin";
-const userName = "cris";
-export default function CommunityPage() {
+export default async function CommunityPage() {
+  const user = await getUser();
+  const userId = `${user.username}_${user.sub}`;
+  const serverClient = StreamChat.getInstance(
+    process.env.GET_STREAM_API_KEY || "",
+    process.env.GET_STREAM_SECRET,
+  );
+  const token = serverClient.createToken(
+    userId,
+    Math.floor(Date.now() / 1000) + 60 * 60,
+  );
+  const channel = serverClient.channel("messaging", "custom_channel_id_1", {
+    name: "🔥 Talk about Fire",
+    image: "https://getstream.io/random_png/?name=fire",
+  });
+  const channel2 = serverClient.channel("messaging", "custom_channel_id_2", {
+    name: "🎵 We don’t talk about Bruno",
+    image: "https://getstream.io/random_png/?name=bruno",
+  });
+  await channel.addMembers(["crisandolin", "crisandolin_2", "kimi_1"]);
+  await channel2.addMembers(["crisandolin", "crisandolin_2", "kimi_1"]);
+
   return (
     <Community
       apiKey={process.env.GET_STREAM_API_KEY || ""}
       userId={userId}
-      userName={userName}
-      userToken={process.env.GET_STREAM_TOKEN || ""}
+      userName={user.username}
+      userToken={token}
     />
   );
 }

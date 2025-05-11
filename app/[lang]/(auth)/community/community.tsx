@@ -66,14 +66,10 @@ const Community = ({ apiKey, userId, userName, userToken }: Props) => {
 
     const setupChannels = async () => {
       const ch1 = client.channel("messaging", "custom_channel_id_1", {
-        name: "🔥 Talk about Fire",
-        image: "https://getstream.io/random_png/?name=fire",
         members: [userId],
       });
 
       const ch2 = client.channel("messaging", "custom_channel_id_2", {
-        name: "🎵 We don’t talk about Bruno",
-        image: "https://getstream.io/random_png/?name=bruno",
         members: [userId],
       });
 
