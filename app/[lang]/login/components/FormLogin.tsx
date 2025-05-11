@@ -8,9 +8,9 @@ import { login } from "../service";
 import { Trans, useLingui } from "@lingui/react/macro";
 
 const MESSAGES = [
-  "Got fired from ur job",
-  "Know about FIRE",
-  "Fire up ur porto",
+  "Got fired from ur job 🤡",
+  "Know about FIRE 👀",
+  "Fire up ur porto 🫦",
 ];
 
 function Typewriter() {
