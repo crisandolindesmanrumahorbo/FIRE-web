@@ -1,3 +1,5 @@
+"use client";
+
 import IconBitcoin from "./IconBitcoin";
 import IconChat from "@/app/components/IconChat";
 import IconHome from "@/app/components/IconHome";
@@ -5,34 +7,45 @@ import IconSignOut from "@/app/components/IconSignOut";
 import Link from "next/link";
 import IconChatbot from "./IconChatbot";
 import IconCart from "./IconCart";
+import { usePathname } from "next/navigation";
 
 export default function Sidebar({ open }: { open: boolean }) {
+  const pathname = usePathname();
+  const lastPath = pathname.split("/").reverse()[0];
   const menus = [
     {
       name: "Home",
       url: "/",
-      icon: <IconHome />,
+      icon: <IconHome isActive={lastPath === "en"} />,
     },
     {
       name: "Buy",
       url: "/transaction/buy/ETHUSD",
-      icon: <IconBitcoin />,
+      icon: (
+        <IconBitcoin
+          isActive={
+            pathname.split("/").length > 2
+              ? pathname.split("/").reverse()[2] === "transaction"
+              : false
+          }
+        />
+      ),
     },
     {
       name: "Order",
       url: "/order",
-      icon: <IconCart />,
+      icon: <IconCart isActive={lastPath === "order"} />,
     },
     {
       name: "Chatbot",
       url: "/chatbot",
-      icon: <IconChatbot />,
+      icon: <IconChatbot isActive={lastPath === "chatbot"} />,
     },
 
     {
       name: "Community",
       url: "/community",
-      icon: <IconChat />,
+      icon: <IconChat isActive={lastPath === "community"} />,
     },
   ];
   return (
