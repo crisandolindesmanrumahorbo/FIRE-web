@@ -7,16 +7,12 @@ import RangeSlider from "@/app/components/RangeSlider";
 import Dropdown from "@/app/components/Dropdown";
 import IconArrowDown from "@/app/components/IconArrow";
 import Input from "@/app/components/InputPrice";
+import { EXPIRY } from "@/app/constants/product";
 
 export interface IExpiry {
   value: string;
   label: string;
 }
-
-export const EXPIRY = [
-  { value: "GFD", label: "Good For Day" },
-  { value: "GTC", label: "Good Till Cancelled" },
-];
 
 export default function BuyForm({}: { symbol?: string }) {
   const tradingBalance = 3262364;

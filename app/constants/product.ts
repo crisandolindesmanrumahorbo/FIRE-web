@@ -37,3 +37,8 @@ export const PRODUCTS: Product[] = [
     tag: ["TB", "TL"],
   },
 ];
+
+export const EXPIRY = [
+  { value: "GFD", label: "Good For Day" },
+  { value: "GTC", label: "Good Till Cancelled" },
+];
