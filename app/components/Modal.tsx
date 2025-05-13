@@ -4,7 +4,7 @@ import { useRef } from "react";
 import useClickOutside from "../hooks/useClickOutside";
 
 type Props = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   open: boolean;
   onCloseAction: () => void;
   title?: string;
@@ -30,7 +30,7 @@ export default function Modal({ open, onCloseAction, title, children }: Props) {
                   </p>
                 </div>
                 <button
-                  className="items-center flex justify-center"
+                  className="items-center flex justify-center cursor-pointer"
                   onClick={onCloseAction}
                 >
                   <svg

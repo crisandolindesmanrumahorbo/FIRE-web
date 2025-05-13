@@ -1,11 +1,12 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import Input from "../../../components/Input";
 import { initCookies } from "../../../utils/cookies";
 import { login } from "../service";
 import { Trans, useLingui } from "@lingui/react/macro";
+import Modal from "@/app/components/Modal";
 
 const MESSAGES = [
   "Got fired from ur job 🤡",
@@ -58,9 +59,13 @@ function Typewriter() {
 export default function FormLogin() {
   const { t } = useLingui();
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const myParam = searchParams.get("message");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const isSessionExpired = myParam === "session-expired";
+  const [open, setOpen] = useState(isSessionExpired);
 
   const onLogin = async () => {
     if (!username || !password) {
@@ -78,6 +83,13 @@ export default function FormLogin() {
 
   return (
     <>
+      <Modal
+        open={open}
+        onCloseAction={() => {
+          setOpen(false);
+        }}
+        title="Session"
+      />
       <div className="flex sm:justify-start justify-center items-center sm:mb-[60px] mb-[10px] sm:w-full w-[200px]">
         <Typewriter />
       </div>

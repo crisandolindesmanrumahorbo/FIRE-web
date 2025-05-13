@@ -45,7 +45,9 @@ export async function middleware(request: NextRequest) {
         cache: "no-store",
       });
       if (response.status >= 400) {
-        return NextResponse.redirect(new URL(`/login`, request.url));
+        return NextResponse.redirect(
+          new URL(`/login?message=session-expired`, request.url),
+        );
       }
     } catch {
       return NextResponse.redirect(new URL(`/login`, request.url));
