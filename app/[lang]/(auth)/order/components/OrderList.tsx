@@ -85,7 +85,7 @@ export default function OrderList({ orders }: { orders: Order[] }) {
                     <td className="p-2">{order.price}</td>
                     <td className="p-2">{order.lot}</td>
                     <td className="p-2">
-                      <div className="flex flex-col items-center justify-center">
+                      <div className="flex flex-col items-center justify-center text-center">
                         <div className="text-start">
                           <p>{expiry?.value}</p>
                           <p className="text-xs text-gray-400 dark:text-gray-600">

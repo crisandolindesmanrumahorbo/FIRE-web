@@ -1,12 +1,12 @@
 import Image from "next/image";
-import Navbar from "../../theme/Navbar";
+import LoginNavbar from "../../theme/LoginNavbar";
 import FormLogin from "./components/FormLogin";
 import { withLinguiPage } from "@/app/hoc/useLingui";
 
 async function Login() {
   return (
     <>
-      <Navbar />
+      <LoginNavbar />
       <div className="w-full min-h-screen flex justify-center items-center">
         <div className="flex xl:flex-row flex-col items-center sm:gap-10 gap-2 border border-gray-700 p-12 mx-4 rounded-lg h-full">
           <div className="w-full items-center justify-center flex mb-6">
