@@ -14,7 +14,7 @@ export default function TopMenu() {
   return (
     <div className="sticky top-0 h-[60px]w-full">
       <div className="flex justify-end mx-4 h-full items-center">
-        <div className="flex flex-col gap-1 mr-2">
+        <div className="flex gap-1 mr-2">
           <div className="relative">
             {/* Dot */}
             <div
