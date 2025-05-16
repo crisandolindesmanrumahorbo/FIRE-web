@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
-import useClickOutside from '@/app/hooks/useClickOutside';
-import { ReactElement, useRef, useState } from 'react';
-import { IExpiry } from '../[lang]/transaction/buy/components/BuyForm';
+import useClickOutside from "@/app/hooks/useClickOutside";
+import { ReactElement, useRef, useState } from "react";
+import { IExpiry } from "../[lang]/(auth)/transaction/buy/components/BuyForm";
 
 const Dropdown = ({
   items,
@@ -27,13 +27,13 @@ const Dropdown = ({
   };
 
   return (
-    <div className='relative group'>
-      <button ref={buttonRef} onClick={handleClick} className='w-full h-full'>
+    <div className="relative group">
+      <button ref={buttonRef} onClick={handleClick} className="w-full h-full">
         {children}
       </button>
       <div
         ref={dropdownRef}
-        className={`absolute ${isOpen ? 'block' : 'hidden'} 
+        className={`absolute ${isOpen ? "block" : "hidden"} 
             dark:bg-[var(--foreground)] bg-[var(--background)] right-0 left-auto w-48 min-w-max 
             rounded shadow-lg border border-gray-800 z-30
             max-h-[350px] overflow-y-auto`}
@@ -45,7 +45,7 @@ const Dropdown = ({
               handleClick();
             }}
             key={item.value}
-            className='cursor-pointer block px-4 py-2 hover:bg-gray-200 hover:text-black font-medium text-sm font-inter'
+            className="cursor-pointer block px-4 py-2 hover:bg-gray-200 hover:text-black font-medium text-sm font-inter"
           >
             {item.label}
           </p>

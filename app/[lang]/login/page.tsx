@@ -3,7 +3,11 @@ import LoginNavbar from "../../theme/LoginNavbar";
 import FormLogin from "./components/FormLogin";
 import { withLinguiPage } from "@/app/hoc/useLingui";
 
-async function Login() {
+type Params = Promise<{ lang: string; symbol: string }>;
+
+//need to add params because used on withLinguiPage
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const Login = (_props: { params: Params }) => {
   return (
     <>
       <LoginNavbar />
@@ -27,6 +31,6 @@ async function Login() {
       </div>
     </>
   );
-}
+};
 
 export default withLinguiPage(Login);

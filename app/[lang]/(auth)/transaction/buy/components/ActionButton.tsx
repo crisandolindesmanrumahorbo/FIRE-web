@@ -122,7 +122,7 @@ const Button = ({
   return (
     <button
       disabled={disabled}
-      className={`disabled:bg-gray-300 rounded text-center w-full p-2 bg-green-600 text-white ${className}`}
+      className={`disabled:bg-gray-300 rounded text-center w-full p-2 bg-green-600 text-white cursor-pointer ${className}`}
       onClick={onClick}
     >
       {label}

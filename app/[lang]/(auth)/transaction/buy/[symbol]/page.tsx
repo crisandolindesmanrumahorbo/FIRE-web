@@ -1,4 +1,4 @@
-import { QueryParams, withLinguiPage } from "@/app/hoc/useLingui";
+import { withLinguiPage } from "@/app/hoc/useLingui";
 import ActionButton from "../components/ActionButton";
 import BuyForm from "../components/BuyForm";
 import InitMarket from "../components/InitMarket";
@@ -8,7 +8,7 @@ import ProductHeader from "../components/ProductHeader";
 
 type Params = Promise<{ lang: string; symbol: string }>;
 
-const Buy = async (props: { params: Params; addtionalParams: QueryParams }) => {
+const Buy = async (props: { params: Params }) => {
   const { symbol } = await props.params;
   return (
     <InitMarket>

@@ -13,7 +13,7 @@ export const withLinguiPage = <Props extends PageProps>(
   AppRouterPage: React.ComponentType<PageLangParam & Props>,
 ): PageExposedToNextJS<Props> => {
   return async function WithLingui(props) {
-    const { lang } = await props.params;
+    const { lang } = await props?.params;
     const i18n = allI18nInstances[lang];
     setI18n(i18n);
 

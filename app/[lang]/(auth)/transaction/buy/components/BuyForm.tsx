@@ -65,7 +65,7 @@ export default function BuyForm({}: { symbol?: string }) {
         </div>
         <div className="flex justify-between items-center">
           <p>Price</p>
-          <Input dot step={100} value={price} setValue={setPrice} />
+          <Input step={100} value={price} setValue={setPrice} />
         </div>
         <div className="flex justify-between items-center">
           <p>Lot</p>

@@ -8,13 +8,13 @@ import { login } from "../service";
 import { Trans, useLingui } from "@lingui/react/macro";
 import Modal from "@/app/components/Modal";
 
-const MESSAGES = [
-  "Got fired from ur job 🤡",
-  "Know about FIRE 👀",
-  "Fire up ur porto 🫦",
-];
-
 function Typewriter() {
+  const { t } = useLingui();
+  const MESSAGES = [
+    t`Got fired from ur job 🤡`,
+    t`Know about FIRE 👀`,
+    t`Fire up ur porto 🫦`,
+  ];
   const [currentText, setCurrentText] = useState("");
   const [messageIndex, setMessageIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -88,7 +88,7 @@ export default function FormLogin() {
         onCloseAction={() => {
           setOpen(false);
         }}
-        title="Session"
+        title="Session Expired"
       />
       <div className="flex sm:justify-start justify-center items-center sm:mb-[60px] mb-[10px] sm:w-full w-[200px]">
         <Typewriter />
