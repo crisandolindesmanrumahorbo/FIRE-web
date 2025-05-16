@@ -21,8 +21,8 @@ export default async function CommunityPage() {
     name: "🎵 We don’t talk about Bruno",
     image: "https://getstream.io/random_png/?name=bruno",
   });
-  await channel.addMembers(["crisandolin", "crisandolin_2", "kimi_1"]);
-  await channel2.addMembers(["crisandolin", "crisandolin_2", "kimi_1"]);
+  await channel.addMembers([userId, "crisandolin", "crisandolin_2", "kimi_1"]);
+  await channel2.addMembers([userId, "crisandolin", "crisandolin_2", "kimi_1"]);
 
   return (
     <Community
