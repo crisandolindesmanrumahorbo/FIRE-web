@@ -13,14 +13,30 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: app/[lang]/login/components/FormLogin.tsx:66
+#: app/[lang]/login/components/FormLogin.tsx:16
+msgid "Fire up ur porto 🫦"
+msgstr "Fire up ur porto 🫦"
+
+#: app/[lang]/login/components/FormLogin.tsx:14
+msgid "Got fired from ur job 🤡"
+msgstr "Got fired from ur job 🤡"
+
+#: app/[lang]/login/components/FormLogin.tsx:15
+msgid "Know about FIRE 👀"
+msgstr "Know about FIRE 👀"
+
+#: app/[lang]/login/components/FormLogin.tsx:130
 msgid "Login"
 msgstr "Login"
 
-#: app/[lang]/login/components/FormLogin.tsx:57
+#: app/[lang]/login/components/FormLogin.tsx:121
 msgid "Password"
 msgstr "Password"
 
-#: app/[lang]/login/components/FormLogin.tsx:47
+#: app/[lang]/login/components/FormLogin.tsx:111
 msgid "Username"
 msgstr "Username"
+
+#: app/[lang]/(auth)/(main)/components/Watchlist.tsx:46
+msgid "Watchlist"
+msgstr "Watchlist"

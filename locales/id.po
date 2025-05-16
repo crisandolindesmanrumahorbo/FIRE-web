@@ -13,14 +13,30 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: app/[lang]/login/components/FormLogin.tsx:66
+#: app/[lang]/login/components/FormLogin.tsx:16
+msgid "Fire up ur porto 🫦"
+msgstr "Kaya(badut) dalam setahun 🫦"
+
+#: app/[lang]/login/components/FormLogin.tsx:14
+msgid "Got fired from ur job 🤡"
+msgstr "Hidup kadang tidak adil 🤡"
+
+#: app/[lang]/login/components/FormLogin.tsx:15
+msgid "Know about FIRE 👀"
+msgstr "Tiba-tiba tau FIRE 👀"
+
+#: app/[lang]/login/components/FormLogin.tsx:130
 msgid "Login"
 msgstr "klik bang"
 
-#: app/[lang]/login/components/FormLogin.tsx:57
+#: app/[lang]/login/components/FormLogin.tsx:121
 msgid "Password"
 msgstr "dimana rumahnya"
 
-#: app/[lang]/login/components/FormLogin.tsx:47
+#: app/[lang]/login/components/FormLogin.tsx:111
 msgid "Username"
 msgstr "siapa namanya"
+
+#: app/[lang]/(auth)/(main)/components/Watchlist.tsx:46
+msgid "Watchlist"
+msgstr "Liat dulu"

@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Stockbit",
+  title: "Fire",
   description: "Support by Next and Rust",
 };
 
@@ -30,6 +30,9 @@ export default async function RootLayout({
   initLingui(lang);
   return (
     <html lang={lang} suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-[#191919] text-[#37352f] dark:text-[#ffffffcf] `}
       >
