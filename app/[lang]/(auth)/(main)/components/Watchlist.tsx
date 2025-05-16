@@ -20,6 +20,7 @@ import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import { PRODUCTS } from "@/app/constants/product";
 import ProductHeader from "../../transaction/buy/components/ProductHeader";
+import { Trans } from "@lingui/react/macro";
 
 const productsName = PRODUCTS.map((product) => product.symbol);
 
@@ -42,7 +43,7 @@ export default function Wathclist() {
         <SortableContext items={items} strategy={verticalListSortingStrategy}>
           <div className="mt-4 border rounded sm:mx-4 mx-2 sm:p-4 p-2 border-gray-800 ">
             <div className="flex flex-col gap-2">
-              <p>Watchlist</p>
+              <Trans>Watchlist</Trans>
               {items.map((id, i) => (
                 <SortableItem key={i} symbol={id} />
               ))}
