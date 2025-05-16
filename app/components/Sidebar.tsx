@@ -8,6 +8,7 @@ import Link from "next/link";
 import IconChatbot from "./IconChatbot";
 import IconCart from "./IconCart";
 import { usePathname } from "next/navigation";
+import IconPieChart from "./IconPieChart";
 
 export default function Sidebar({ open }: { open: boolean }) {
   const pathname = usePathname();
@@ -16,7 +17,12 @@ export default function Sidebar({ open }: { open: boolean }) {
     {
       name: "Home",
       url: "/",
-      icon: <IconHome isActive={lastPath === "en"} />,
+      icon: <IconHome isActive={lastPath === "en" || lastPath === "id"} />,
+    },
+    {
+      name: "Portfolio",
+      url: "/portfolio",
+      icon: <IconPieChart isActive={lastPath === "portfolio"} />,
     },
     {
       name: "Buy",
@@ -41,7 +47,6 @@ export default function Sidebar({ open }: { open: boolean }) {
       url: "/chatbot",
       icon: <IconChatbot isActive={lastPath === "chatbot"} />,
     },
-
     {
       name: "Community",
       url: "/community",
