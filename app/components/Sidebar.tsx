@@ -59,7 +59,7 @@ export default function Sidebar({ open }: { open: boolean }) {
         className={`${open ? "block" : "hidden"} fixed left-0 top-0 pt-15 w-[200px] h-full bg-opacity-75  bg-green-950
                         z-30 overflow-y-auto`}
       >
-        <div className="flex flex-col justify-between bg-black h-full">
+        <div className="flex flex-col justify-between bg-black h-full overflow-hidden">
           <div className="flex flex-col gap-6 mt-2 justify-start w-full ml-3">
             {menus.map((menu, idx) => (
               <Link
@@ -84,7 +84,7 @@ export default function Sidebar({ open }: { open: boolean }) {
       </div>
       <div
         className={`${open ? "hidden" : "block"} fixed left-0 top-0 pt-15 w-[50px] h-full bg-opacity-75 bg-black
-                        z-30 overflow-y-auto`}
+                        z-30 overflow-y-auto overflow-hidden`}
       >
         <div className="flex flex-col justify-between bg-black h-full">
           <div className="flex flex-col gap-6 mt-2 justify-start w-full ml-3">

@@ -7,7 +7,7 @@ const Card = ({
 }) => {
   return (
     <div
-      className={`border border-gray-800 p-4 mx-4 rounded ${className ?? ""}`}
+      className={`border border-gray-800 p-4 mx-4 rounded-xl ${className ?? ""}`}
     >
       {children}
     </div>

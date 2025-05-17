@@ -35,11 +35,11 @@ const Menu = () => {
         ref={dropdownRef}
         className={`absolute ${isOpen ? "block" : "hidden"} 
             dark:bg-[var(--foreground)] bg-[var(--background)] right-0 left-auto w-54 sm:w-64 min-w-max 
-            rounded shadow-2xl border border-gray-800 dark:border-gray-400 z-30
+            rounded-xl shadow-2xl border border-gray-800 dark:border-gray-400 z-30
             max-h-[350px] overflow-y-auto`}
       >
         <div className="flex flex-col w-full py-2 gap-2">
-          <div className="border border-gray-800 dark:border-gray-400 rounded mx-2">
+          <div className="border border-gray-800 dark:border-gray-400 rounded-xl mx-2">
             <div className="flex p-2 gap-4 items-center">
               <Avatar path="/fire.png" />
               <p>{profile?.name}</p>

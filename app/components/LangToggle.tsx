@@ -20,13 +20,13 @@ export default function LangToggle() {
   return (
     <button
       onClick={handleClick}
-      className="w-14 h-8 flex items-center bg-gray-300 dark:bg-zinc-800 rounded-full px-1 relative"
+      className="w-14 h-8 flex items-center bg-red-900 rounded-full px-1 relative"
       aria-label="Toggle language"
       title="Toggle language"
     >
       <>
         <div className="absolute w-full">
-          <div className="flex w-full justify-between pr-4 pl-1 dark:text-white text-black text-xs font-semibold">
+          <div className="flex w-full justify-between pr-4 pl-1 dark:text-white text-white text-xs font-semibold">
             <p>EN</p>
             <p>ID</p>
           </div>

@@ -41,7 +41,7 @@ export default function Wathclist() {
         onDragEnd={handleDragEnd}
       >
         <SortableContext items={items} strategy={verticalListSortingStrategy}>
-          <div className="mt-4 border rounded sm:mx-4 mx-2 sm:p-4 p-2 border-gray-800 ">
+          <div className="mt-4 border rounded-xl sm:mx-4 mx-2 sm:p-4 p-4 border-gray-800 ">
             <div className="flex flex-col gap-2">
               <Trans>Watchlist</Trans>
               {items.map((id, i) => (
