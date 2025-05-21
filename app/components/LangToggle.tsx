@@ -26,13 +26,13 @@ export default function LangToggle() {
     >
       <>
         <div className="absolute w-full">
-          <div className="flex w-full justify-between pr-4 pl-1 dark:text-white text-white text-xs font-semibold">
+          <div className="flex w-full justify-between pr-4 pl-1 text-white text-xs font-semibold">
             <p>EN</p>
             <p>ID</p>
           </div>
         </div>
         <motion.div
-          className="w-6 h-6 bg-white rounded-full shadow-md flex items-center justify-center overflow-hidden z-10"
+          className="w-6 h-6 bg-red-800 rounded-full shadow-md flex items-center justify-center overflow-hidden z-10"
           layout
           animate={{ x: isEnglish ? 24 : 0 }} // Moves the knob
           transition={{ type: "spring", stiffness: 500, damping: 30 }}

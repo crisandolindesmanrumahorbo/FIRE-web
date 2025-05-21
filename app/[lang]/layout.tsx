@@ -1,4 +1,3 @@
-import { ThemeProvider } from "next-themes";
 import "../globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
 import type { Metadata } from "next";
@@ -6,6 +5,7 @@ import { allMessages } from "../appRouterI18n";
 import { LinguiClientProvider } from "../LinguiClientProvider";
 import { initLingui, PageLangParam } from "../initLingui";
 import { PropsWithChildren } from "react";
+import { ThemeProviders } from "../theme/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,16 +33,12 @@ export default async function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-[#191919] text-[#37352f] dark:text-[#ffffffcf] `}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <LinguiClientProvider
           initialLocale={lang}
           initialMessages={allMessages[lang]!}
         >
-          <ThemeProvider attribute="class" defaultTheme="system">
-            {children}
-          </ThemeProvider>
+          <ThemeProviders>{children}</ThemeProviders>
         </LinguiClientProvider>
       </body>
     </html>

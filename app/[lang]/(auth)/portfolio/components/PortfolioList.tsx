@@ -19,19 +19,19 @@ export default function PortfolioList({
           <table className="w-full border-collapse">
             <thead>
               <tr className="">
-                <th className="border-x border-gray-800 dark:border-gray-300 w-[20%]">
+                <th className="border-x dark:border-gray-800 border-gray-300 w-[20%]">
                   Product
                 </th>
-                <th className="border-x border-gray-800 dark:border-gray-300 w-[20%]">
+                <th className="border-x dark:border-gray-800 border-gray-300 w-[20%]">
                   Current Price/Avg Price
                 </th>
-                <th className="border-x border-gray-800 dark:border-gray-300 w-[15%]">
+                <th className="border-x dark:border-gray-800 border-gray-300 w-[15%]">
                   Lot
                 </th>
-                <th className="border-x border-gray-800 dark:border-gray-300 w-[25%]">
+                <th className="border-x dark:border-gray-800 border-gray-300 w-[25%]">
                   Market/Invested Value
                 </th>
-                <th className="border-x border-gray-800 dark:border-gray-300 w-[20%]">
+                <th className="border-x dark:border-gray-800 border-gray-300 w-[20%]">
                   Unrealized P/L
                 </th>
               </tr>
@@ -86,7 +86,7 @@ export default function PortfolioList({
                           >
                             {`${numberWithCommas(parseFloat(market?.toFixed(2)))}`}
                           </p>
-                          <p className="text-xs text-gray-400 dark:text-gray-600">
+                          <p className="text-xs dark:text-gray-400 text-gray-600">
                             {portfolio.invested_value}
                           </p>
                         </div>

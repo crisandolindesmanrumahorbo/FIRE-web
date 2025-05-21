@@ -36,25 +36,25 @@ export default function OrderList({ orders }: { orders: Order[] }) {
           <table className="w-full border-collapse">
             <thead>
               <tr className="">
-                <th className="border-x border-gray-800 dark:border-gray-300 w-[20%]">
+                <th className="border-x dark:border-gray-800 border-gray-300 w-[20%]">
                   Product
                 </th>
-                <th className="border-x border-gray-800 dark:border-gray-300 w-[10%]">
+                <th className="border-x dark:border-gray-800 border-gray-300 w-[10%]">
                   Side
                 </th>
-                <th className="border-x border-gray-800 dark:border-gray-300 w-[15%]">
+                <th className="border-x dark:border-gray-800 border-gray-300 w-[15%]">
                   Price
                 </th>
-                <th className="border-x border-gray-800 dark:border-gray-300 w-[10%]">
+                <th className="border-x dark:border-gray-800 border-gray-300 w-[10%]">
                   Lot
                 </th>
-                <th className="border-x border-gray-800 dark:border-gray-300 w-[15%]">
+                <th className="border-x dark:border-gray-800 border-gray-300 w-[15%]">
                   Expiry
                 </th>
-                <th className="border-x border-gray-800 dark:border-gray-300 w-[20%]">
+                <th className="border-x dark:border-gray-800 border-gray-300 w-[20%]">
                   Date
                 </th>
-                <th className="border-x border-gray-800 dark:border-gray-300 w-[10%]">
+                <th className="border-x dark:border-gray-800 border-gray-300 w-[10%]">
                   Status
                 </th>
               </tr>
@@ -77,7 +77,7 @@ export default function OrderList({ orders }: { orders: Order[] }) {
                       </div>
                     </td>
                     <td
-                      className={`p-2 font-semibold ${is_buy ? "text-green-500 dark:text-green-800" : "text-red-400"}`}
+                      className={`p-2 font-semibold ${is_buy ? "dark:text-green-500 text-green-800" : "text-red-400"}`}
                     >
                       {is_buy ? "Buy" : "Sell"}
                     </td>
@@ -88,7 +88,7 @@ export default function OrderList({ orders }: { orders: Order[] }) {
                       <div className="flex flex-col items-center justify-center text-center">
                         <div className="text-start">
                           <p>{expiry?.value}</p>
-                          <p className="text-xs text-gray-400 dark:text-gray-600">
+                          <p className="text-xs dark:text-gray-400 text-gray-600">
                             {expiry?.label}
                           </p>
                         </div>
@@ -99,13 +99,13 @@ export default function OrderList({ orders }: { orders: Order[] }) {
                       <div className="flex flex-col items-center justify-center">
                         <div className="text-start">
                           <p>{created_at[0]}</p>
-                          <p className="text-xs text-gray-400 dark:text-gray-600">
+                          <p className="text-xs dark:text-gray-400 text-gray-600">
                             {created_at[1]}
                           </p>
                         </div>
                       </div>
                     </td>
-                    <td className="font-semibold p-2 text-green-500 dark:text-green-600">
+                    <td className="font-semibold p-2 dark:text-green-500 text-green-600">
                       Match
                     </td>
                   </tr>

@@ -12,7 +12,10 @@ const Login = (_props: { params: Params }) => {
     <>
       <LoginNavbar />
       <div className="w-full min-h-screen flex justify-center items-center">
-        <div className="flex xl:flex-row flex-col items-center sm:gap-10 gap-2 border border-gray-700 p-12 mx-4 rounded-lg h-full">
+        <div
+          className="flex xl:flex-row flex-col items-center sm:gap-10 gap-2 border 
+          dark:border-gray-600 border-gray-400 p-12 mx-4 rounded-2xl h-full shadow-xl"
+        >
           <div className="w-full items-center justify-center flex mb-6">
             <div className="relative sm:w-[400px] sm:h-[400px] w-[200px] h-[200px]">
               <Image
