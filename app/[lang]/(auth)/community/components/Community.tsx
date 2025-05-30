@@ -85,7 +85,7 @@ const Community = ({ apiKey, userId, userName, userToken }: Props) => {
     <Chat
       client={client}
       theme={
-        theme !== "dark" ? "str-chat__theme-dark" : "str-chat__theme-light"
+        theme === "dark" ? "str-chat__theme-dark" : "str-chat__theme-light"
       }
     >
       <div className="flex h-[91vh] overflow-hidden">

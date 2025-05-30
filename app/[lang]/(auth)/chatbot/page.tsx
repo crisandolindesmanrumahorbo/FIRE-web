@@ -136,7 +136,7 @@ export default function Chatbot() {
                 bg-transparent
                 focus:outline-none
                 overflow-y-auto /* Show scrollbar when content exceeds max height */
-                scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-600
+                scrollbar-thin dark:scrollbar-thumb-gray-300 scrollbar-thumb-gray-600
               `}
                 placeholder="Message FIRE Chat..."
                 rows={1}
