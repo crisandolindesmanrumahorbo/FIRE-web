@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
-  console.log(theme);
   const isDark = theme === "dark";
 
   return (
