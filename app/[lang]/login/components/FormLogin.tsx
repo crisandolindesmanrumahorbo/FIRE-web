@@ -20,6 +20,30 @@ export default function FormLogin() {
   const isSessionExpired = myParam === "session-expired";
   const [open, setOpen] = useState(isSessionExpired);
 
+  // useEffect(() => {
+  //   if ("serviceWorker" in navigator) {
+  //     navigator.serviceWorker
+  //       .register("/service-worker.js")
+  //       .then(async (reg) => {
+  //         const sub = await reg.pushManager.getSubscription();
+  //         if (sub) {
+  //           await sub.unsubscribe();
+  //         }
+  //         const subscription = await reg.pushManager.subscribe({
+  //           userVisibleOnly: true,
+  //           applicationServerKey:
+  //             "BEuATBOnG9UqQvRmD-cU4yRRFsZiGPpcxhRBQBthM4PWJwA7hZaH_9Bz0XjbS0vw3iuSNLg6iZUaygr1a1kkdrk",
+  //         });
+  //
+  //         await fetch("http://localhost:8080/api/register-subscription", {
+  //           method: "POST",
+  //           headers: { "Content-Type": "application/json" },
+  //           body: JSON.stringify(subscription),
+  //         });
+  //       });
+  //   }
+  // }, []);
+
   const onLogin = async () => {
     if (!username || !password) {
       setMessage("Username and password are required");
