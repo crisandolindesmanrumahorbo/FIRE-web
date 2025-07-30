@@ -26,13 +26,21 @@ export async function middleware(request: NextRequest) {
   }
 
   // TODO
-  // 1. auth tokio runtime, sqlx, db pools -- DONE
-  // 2. auth validation api -- DONE
   // 3. more common lib
   // 4. macro
   // 5. portfolio with aggreate sql maybe popular web server
-  // 6. unit testing -- DONE
-  // 7. Multi language -- DONE
+  // 9. chatbot history?
+  // 13. search
+  // 14. .sh file
+  // 15. kafka integration
+  // 16. redis integration -- DONE
+  // 17. BE something -- TODO
+  // 18. logging
+  // 19. polling chat telegram bot
+  // -> received chat telegram bot with narative text
+  // -> llm parse the text to clean order object (maybe user need to confirm the order)
+  // -> send the order to order service
+  // -> send notification to the web that order created from tele -- DONE
 
   // Already logged in, allow access
   if (tokenExist && !isAuth) {
@@ -72,6 +80,6 @@ export const config = {
      * - images - .svg, .png, .jpg, .jpeg, .gif, .webp
      * Feel free to modify this pattern to include more paths.
      */
-    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
+    "/((?!_next/static|_next/image|favicon.ico|service-worker.js|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
   ],
 };
