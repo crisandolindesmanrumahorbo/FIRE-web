@@ -24,12 +24,28 @@ The goal was to design and implement a real-time trading system from scratch usi
     - HTTP request parser (path, query, body → Rust models).
     - HTTP client with HTTPS support (for Telegram API integration).
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack & Tools
 
-Backend: Rust (Tokio, Serde, custom crates), PostgreSQL, Redis
-Frontend: Next.js (React, Tailwind CSS)
-Integrations: Ollama GPT, GetStream.io, Telegram Bot API, Firebase FCM
-Other: Docker (optional for deployment), Crates.io (published libraries)
+Frontend:
+- Nextjs
+- Typescript
+- Dnd sortable
+- getstream.io
+- next themes
+- lingui
+- tailwind
+- zustand
+
+Backend:
+- Rust
+- websocket
+- jwt
+- tokio
+- sqlx
+- request-http-server
+- redis
+- rumbo_client
+- Ollama Gemma 3
 
 
 ## 📸 Demo & Screenshots
