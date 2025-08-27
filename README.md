@@ -21,8 +21,8 @@ The goal was to design and implement a real-time trading system from scratch usi
 - 🌐 Multi-language Support – available in /id (Bahasa Indonesia) and /en (English).
 - 🌓 Dark / Light Mode – theme switcher for better UX.
 - 📦 Custom Rust Crates:
-    - HTTP request parser (path, query, body → Rust models).
-    - HTTP client with HTTPS support (for Telegram API integration).
+    - <a href="https://github.com/crisandolindesmanrumahorbo/request-http-parser" target="_blank">HTTP request parser (path, query, body → Rust models).</a>
+    - <a href="https://github.com/crisandolindesmanrumahorbo/FIRE-auth" target="_blank">HTTP client with HTTPS support (for Telegram API integration).</a>
 
 ## 🛠️ Tech Stack & Tools
 
@@ -52,7 +52,7 @@ Backend:
 <img width="400" src="public/screenshots/1.png" alt="Login Darkmode"><img width="400" src="public/screenshots/2.png" alt="Login Lightmode"><img width="400" src="public/screenshots/3.png" alt="Login Darkmode"><img width="400" src="public/screenshots/4.png" alt="Login Lightmode"><img width="400" src="public/screenshots/5.png" alt="Login Darkmode"><img width="400" src="public/screenshots/6.png" alt="Login Lightmode"><img width="400" src="public/screenshots/7.png" alt="Login Darkmode"><img width="400" src="public/screenshots/8.png" alt="Login Lightmode"><img width="400" src="public/screenshots/9.png" alt="Login Darkmode"><img width="400" src="public/screenshots/10.png" alt="Login Lightmode"><img width="400" src="public/screenshots/11.png" alt="Login Darkmode">
 
 [![Watch the video](https://i.sstatic.net/Vp2cE.png)](https://youtu.be/mlmkmEr6nAs)
-
+https://github.com/crisandolindesmanrumahorbo/rumbo_http_client
 ## Service Depedencies
 1. <a href="https://github.com/crisandolindesmanrumahorbo/FIRE-auth" target="_blank">Fire Authentication</a>
 2. <a href="https://github.com/crisandolindesmanrumahorbo/FIRE-order" target="_blank">Fire Order</a>
