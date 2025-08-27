@@ -22,7 +22,7 @@ The goal was to design and implement a real-time trading system from scratch usi
 - 🌓 Dark / Light Mode – theme switcher for better UX.
 - 📦 Custom Rust Crates:
     - <a href="https://github.com/crisandolindesmanrumahorbo/request-http-parser" target="_blank">HTTP request parser (path, query, body → Rust models).</a>
-    - <a href="https://github.com/crisandolindesmanrumahorbo/FIRE-auth" target="_blank">HTTP client with HTTPS support (for Telegram API integration).</a>
+    - <a href="https://github.com/crisandolindesmanrumahorbo/rumbo_http_client" target="_blank">HTTP client with HTTPS support (for Telegram API integration).</a>
 
 ## 🛠️ Tech Stack & Tools
 
