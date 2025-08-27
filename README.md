@@ -53,6 +53,11 @@ Backend:
 
 [![Watch the video](https://i.sstatic.net/Vp2cE.png)](https://youtu.be/mlmkmEr6nAs)
 
+## Service Depedencies
+1. <a href="https://github.com/crisandolindesmanrumahorbo/FIRE-auth" target="_blank">Fire Authentication</a>
+2. <a href="https://github.com/crisandolindesmanrumahorbo/FIRE-order" target="_blank">Fire Order</a>
+3. <a href="https://github.com/crisandolindesmanrumahorbo/FIRE-chatbot" target="_blank">Fire Chatbot</a>
+
 ## 🔧 How It Works
 1. User logs into the web app.
 2. Creates an order (from web OR via Telegram chat).
